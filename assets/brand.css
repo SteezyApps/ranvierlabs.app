@@ -1,0 +1,89 @@
+@font-face{font-family:"Space Grotesk";font-weight:400;font-display:swap;src:url(/assets/fonts/space-grotesk-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:700;font-display:swap;src:url(/assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:500;font-display:swap;src:url(/assets/fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
+
+:root{
+  --bg:#0A1628; --bg2:#0F1E35; --text:#EAF2FF; --text2:#8FA3BF; --accent:#2EE6D6; --line:#2A3D57;
+  --cap:#EAF2FF; --mline:#2A3D57; --sig:#2EE6D6; --on-accent:#0A1628;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#F1F5F9; --bg2:#FFFFFF; --text:#0A1628; --text2:#475569; --accent:#0B7F75; --line:#CBD5E1;
+         --cap:#0A1628; --mline:#A3B1C2; --sig:#0B9C90; --on-accent:#FFFFFF; color-scheme:light; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 "Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;min-height:100vh}
+main{flex:1}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;border-radius:8px;z-index:9}
+.skip:focus{left:12px}
+
+/* logo */
+.mark{display:block;overflow:visible}
+.m-line{stroke:var(--mline)} .m-cap{fill:var(--cap)} .m-sig{fill:var(--sig)} .m-arc{stroke:var(--sig)}
+
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;min-height:68px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand .mark{width:52px;height:auto}
+.wm{font-size:1.25rem;letter-spacing:-.03em;line-height:1}
+.wm b{font-weight:700} .wm span{color:var(--text2);font-weight:400}
+header nav{display:flex;gap:4px;flex-wrap:wrap}
+header nav a{color:var(--text2);text-decoration:none;padding:10px 12px;border-radius:8px;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center}
+header nav a:hover{color:var(--text);background:var(--bg2)}
+
+/* hero */
+.hero{padding:88px 0 56px}
+.hero-mark .mark{width:min(260px,62vw);height:auto;margin-bottom:28px}
+.lockup{margin:0;font-size:clamp(2.6rem,9vw,4.6rem);letter-spacing:-.03em;line-height:1.02}
+.lockup b{font-weight:700} .lockup span{font-weight:400;color:var(--text2)}
+.hero h1:not(.lockup){font-size:clamp(2rem,6vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:.3em 0}
+.tagline,.label,.badge{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:500}
+.tagline{color:var(--accent);font-size:1.15rem;margin:14px 0 0}
+.lede{font-size:clamp(1.15rem,2.6vw,1.4rem);color:var(--text);max-width:34ch;margin:22px 0 0;line-height:1.45}
+
+/* signal animation on the mark: arcs light up in sequence */
+@media (prefers-reduced-motion: no-preference){
+  .hero .m-arc{animation:jump 3.6s ease-in-out infinite}
+  .hero .a1{animation-delay:0s} .hero .a2{animation-delay:.25s} .hero .a3{animation-delay:.5s}
+  @keyframes jump{0%,60%,100%{filter:none} 12%{filter:drop-shadow(0 0 6px var(--sig))}}
+}
+
+.divider{max-width:1040px;margin:0 auto;padding:0 24px}
+.divider svg{display:block;width:100%;height:18px}
+.divider path{stroke:var(--line)}
+
+.label{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin:0 0 18px}
+.apps{padding:56px 24px 24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{display:flex;flex-direction:column;gap:10px;padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--bg2);color:var(--text);text-decoration:none;transition:border-color .2s,transform .2s}
+.card h3{margin:0;font-size:1.6rem;letter-spacing:-.02em}
+.card p{margin:0;color:var(--text2)}
+.card .more{margin-top:auto;padding-top:8px;color:var(--accent)}
+.card:hover{border-color:var(--accent)}
+@media (prefers-reduced-motion: no-preference){.card:hover{transform:translateY(-3px)}}
+.badge{display:inline-block;align-self:flex-start;font-size:.75rem;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin:0}
+.contact{padding:32px 24px 72px}
+.contact p{font-size:1.2rem;margin:0}
+
+/* prose / legal */
+.prose{max-width:760px;padding-top:56px;padding-bottom:72px}
+.prose h1{font-size:clamp(2rem,5.5vw,2.8rem);letter-spacing:-.03em;line-height:1.1;margin:.2em 0 .4em}
+.prose h2{font-size:1.2rem;letter-spacing:.01em;margin:2.2em 0 .4em}
+.prose p,.prose li{max-width:68ch}
+.prose .badge{margin:18px 0 8px}
+.prose .divider{padding:0;margin:40px 0 0}
+.legal h2{font-size:1.1rem;color:var(--text)}
+ul.links{padding-left:1.2em}
+ul.links li{margin:.35em 0}
+
+footer.site{border-top:1px solid var(--line);color:var(--text2);font-size:.9rem}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+footer.site p{margin:0}
+footer.site nav{display:flex;gap:4px}
+footer.site nav a{color:var(--text2);padding:10px;min-height:44px;display:inline-flex;align-items:center}
+footer.site nav a:hover{color:var(--text)}
