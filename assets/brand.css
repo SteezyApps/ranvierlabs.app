@@ -87,3 +87,13 @@ footer.site p{margin:0}
 footer.site nav{display:flex;gap:4px}
 footer.site nav a{color:var(--text2);padding:10px;min-height:44px;display:inline-flex;align-items:center}
 footer.site nav a:hover{color:var(--text)}
+
+/* app page: icon + screenshots */
+.app-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.app-head .label{margin:0}
+.app-icon{width:88px;height:88px;border-radius:20px;border:1px solid var(--line);flex:none}
+.shots{list-style:none;margin:0 -24px;padding:8px 24px 16px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory}
+.shots li{flex:none;width:min(240px,62vw);scroll-snap-align:start}
+.shots img{width:100%;height:auto;display:block;border-radius:22px;border:1px solid var(--line)}
+.prose-tight{padding-top:8px}
+.wrap.narrow{max-width:760px}
