@@ -51,3 +51,4 @@ footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
 footer.site p{margin:0}
 footer.site nav{display:flex;gap:4px}
 footer.site nav a{color:var(--text2);padding:10px;min-height:44px;display:inline-flex;align-items:center}
+.sub li{margin:.5em 0}
