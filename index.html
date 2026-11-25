@@ -1,16 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ranvier Labs — Jump ahead.</title>
-<meta name="description" content="Ranvier Labs LLC builds apps that skip the slow parts. Publisher of Homeostasis and Turnpoint.">
+<meta name="description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis and Turnpoint.">
 <link rel="canonical" href="https://ranvierlabs.app/">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ranvier Labs">
 <meta property="og:title" content="Ranvier Labs — Jump ahead.">
-<meta property="og:description" content="Ranvier Labs LLC builds apps that skip the slow parts. Publisher of Homeostasis and Turnpoint.">
+<meta property="og:description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis and Turnpoint.">
 <meta property="og:url" content="https://ranvierlabs.app/">
 <meta property="og:image" content="https://ranvierlabs.app/assets/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -19,13 +18,16 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="color-scheme" content="dark light">
-<link rel="preload" href="/assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/brand.css">
+<meta name="theme-color" content="#0E1F3A">
+<link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/home.css">
+<script>document.documentElement.classList.remove('no-js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site"><div class="wrap"><a class="brand" href="/" aria-label="Ranvier Labs home"><svg class="mark" viewBox="0 36 120 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="/" aria-label="Ranvier Labs home"><svg class="mark" viewBox="0 36 120 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
 <line x1="0" y1="79" x2="120" y2="79" class="m-line" stroke-width="2"/>
 <rect x="8" y="70" width="26" height="18" rx="9" class="m-cap"/>
 <rect x="47" y="70" width="26" height="18" rx="9" class="m-cap"/>
@@ -35,49 +37,73 @@
 <path class="m-arc a1" d="M1.5 66 Q21 22 40.5 66" fill="none" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
 <path class="m-arc a2" d="M40.5 66 Q60 22 79.5 66" fill="none" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
 <path class="m-arc a3" d="M79.5 66 Q99 22 118.5 66" fill="none" stroke-width="5" stroke-linecap="round"/>
-</svg><span class="wm"><b>Ranvier</b> <span>Labs</span></span></a><nav aria-label="Main"><a href="/homeostasis">Homeostasis</a><a href="/turnpoint">Turnpoint</a><a href="/support">Support</a></nav></div></header>
+</svg><span class="wordmark">Ranvier <span>Labs</span></span></a>
+    <nav class="nav" aria-label="Main"><a href="#apps">Apps</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu"><a href="#apps">Apps</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
+</header>
 <main id="main">
-<section class="hero">
-<div class="wrap">
-<div class="hero-mark"><svg class="mark" viewBox="0 36 120 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-<line x1="0" y1="79" x2="120" y2="79" class="m-line" stroke-width="2"/>
-<rect x="8" y="70" width="26" height="18" rx="9" class="m-cap"/>
-<rect x="47" y="70" width="26" height="18" rx="9" class="m-cap"/>
-<rect x="86" y="70" width="26" height="18" rx="9" class="m-cap"/>
-<circle cx="40.5" cy="79" r="3.5" class="m-sig"/>
-<circle cx="79.5" cy="79" r="3.5" class="m-sig"/>
-<path class="m-arc a1" d="M1.5 66 Q21 22 40.5 66" fill="none" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
-<path class="m-arc a2" d="M40.5 66 Q60 22 79.5 66" fill="none" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-<path class="m-arc a3" d="M79.5 66 Q99 22 118.5 66" fill="none" stroke-width="5" stroke-linecap="round"/>
-</svg></div>
-<h1 class="lockup"><b>Ranvier</b> <span>Labs</span></h1>
-<p class="tagline">Jump ahead.</p>
-<p class="lede">We build apps that skip the slow parts.</p>
-</div>
+<section class="hero container">
+  <div class="hero-grid">
+    <div>
+      <h1 class="jump" aria-label="Jump ahead."><span class="line"><span class="ch" aria-hidden="true">J</span><span class="ch" aria-hidden="true">u</span><span class="ch" aria-hidden="true">m</span><span class="ch" aria-hidden="true">p</span></span><span class="line"><span class="ch" aria-hidden="true">a</span><span class="ch" aria-hidden="true">h</span><span class="ch" aria-hidden="true">e</span><span class="ch" aria-hidden="true">a</span><span class="ch" aria-hidden="true">d</span><span class="ch" aria-hidden="true">.</span></span></h1>
+      <p class="lede">We build apps that skip the slow parts, so you get to the good part of learning something sooner.</p>
+      <div class="ctas"><a class="btn btn-primary" href="#apps">See our apps</a><a class="btn btn-secondary" href="/homeostasis/">Try Homeostasis</a></div>
+    </div>
+    <figure class="phone-col desktop" style="margin:0">
+      <div class="phone"><div class="screen"><picture><source srcset="/assets/img/hs-explore-tamponade.webp" type="image/webp"><img src="/assets/img/hs-explore-tamponade.png" width="900" height="1951" alt="Homeostasis app on iPhone: the cardiovascular screen with a heart diagram and live heart rate, blood pressure, cardiac output and stroke volume traces"></picture></div></div>
+      <figcaption class="phone-caption">Homeostasis on iPhone</figcaption>
+    </figure>
+  </div>
+  <div class="axon desktop" aria-hidden="true"><span class="node"></span><span class="seg"></span><span class="node"></span><span class="seg"></span><span class="node"></span><span class="seg"></span><span class="node"></span></div>
+  <div class="axon mobile" aria-hidden="true"><span class="node"></span><span class="seg"></span><span class="node"></span><span class="seg"></span><span class="node"></span></div>
+  <span class="drop" aria-hidden="true"></span>
+  <figure class="phone-wrap mobile" style="margin-bottom:0">
+    <div class="phone"><div class="screen"><picture><source srcset="/assets/img/hs-explore-tamponade.webp" type="image/webp"><img src="/assets/img/hs-explore-tamponade.png" width="900" height="1951" alt="Homeostasis app on iPhone: the cardiovascular screen with a heart diagram and live heart rate, blood pressure, cardiac output and stroke volume traces" loading="lazy"></picture></div></div>
+  </figure>
+  <p class="phone-caption mobile">Homeostasis on iPhone</p>
 </section>
-<div class="divider" aria-hidden="true"><svg viewBox="0 0 240 24" preserveAspectRatio="none"><path d="M0 22 Q30 2 60 22 Q90 2 120 22 Q150 2 180 22 Q210 2 240 22" fill="none" stroke-width="2"/></svg></div>
-<section class="wrap apps" aria-labelledby="apps-h">
-<h2 id="apps-h" class="label">Our apps</h2>
-<div class="cards">
-<a class="card" href="/homeostasis">
-<span class="badge">Coming soon to iPhone</span>
-<h3 class="card-title"><img src="/assets/img/homeostasis-icon-256.png" width="44" height="44" alt="">Homeostasis</h3>
-<p>Run the body. Pass the exam.</p>
-<span class="more">Learn more <span aria-hidden="true">→</span></span>
-</a>
-<a class="card" href="/turnpoint">
-<span class="badge">Coming soon to iPhone</span>
-<h3 class="card-title"><img src="/assets/img/turnpoint-icon-256.png" width="44" height="44" alt="">Turnpoint</h3>
-<p>Plan for the hard moments</p>
-<span class="more">Learn more <span aria-hidden="true">→</span></span>
-</a>
-</div>
-</section>
-<section class="wrap contact" aria-labelledby="c-h">
-<h2 id="c-h" class="label">Contact</h2>
-<p><a href="mailto:support@ranvierlabs.app">support@ranvierlabs.app</a></p>
+
+<section class="apps" id="apps" aria-labelledby="apps-h">
+  <h2 id="apps-h">Our apps</h2>
+  <div class="app-row">
+    <article class="panel app">
+      <div class="panel-head"><img class="app-icon" src="/assets/img/homeostasis-icon-256.png" width="72" height="72" alt=""><h3>Homeostasis</h3></div>
+      <p>Watch the body’s systems respond in real time, then test yourself. For physiology, nursing and pre-med exam prep.</p>
+      <a class="btn-app" href="/homeostasis/">See Homeostasis</a>
+    </article>
+    <div class="link-gap" aria-hidden="true"><span class="node lit"></span></div>
+    <div class="link-v" aria-hidden="true"><span class="wire"></span><span class="node lit"></span><span class="wire"></span></div>
+    <article class="panel app">
+      <div class="panel-head"><img class="app-icon" src="/assets/img/turnpoint-icon-256.png" width="72" height="72" alt=""><h3>Turnpoint</h3></div>
+      <p>Pick a habit to stop or start and get a daily plan built around your hardest moments. For iPhone and Android.</p>
+      <a class="btn-app" href="/turnpoint/">See Turnpoint</a>
+    </article>
+    <div class="link-gap" aria-hidden="true"><span class="node"></span></div>
+    <div class="link-v" aria-hidden="true"><span class="wire"></span><span class="node"></span><span class="wire"></span></div>
+    <article class="panel next">
+      <h3>Next app</h3>
+      <p>In the lab now. Want to hear when it launches? Email <a href="mailto:support@ranvierlabs.app">support@ranvierlabs.app</a>.</p>
+    </article>
+  </div>
 </section>
 </main>
-<footer class="site"><div class="wrap"><p>© 2026 Ranvier Labs LLC</p><nav aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/support">Support</a></nav></div></footer>
+<footer class="site-footer">
+  <div class="bar">
+    <p>© 2026 Ranvier Labs LLC, Georgia</p>
+    <div class="foot-links"><a href="mailto:support@ranvierlabs.app">support@ranvierlabs.app</a><span class="foot-legal"><a class="legal" href="/privacy">Privacy</a><a class="legal" href="/terms">Terms</a></span></div>
+  </div>
+</footer>
+<script>
+(function(){var b=document.querySelector('.menu-btn'),p=document.getElementById('menu-panel');
+function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');p.classList.toggle('open',o);}
+b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true';set(o);if(o)p.querySelector('a').focus();});
+p.addEventListener('click',function(e){if(e.target.tagName==='A')set(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus();}});
+document.addEventListener('click',function(e){if(!p.contains(e.target)&&!b.contains(e.target))set(false);});})();
+</script>
 </body>
 </html>
