@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ranvierlabs.app/</loc></url>
-  <url><loc>https://ranvierlabs.app/homeostasis</loc></url>
+  <url><loc>https://ranvierlabs.app/homeostasis/</loc></url>
+  <url><loc>https://ranvierlabs.app/homeostasis/nursing/</loc></url>
+  <url><loc>https://ranvierlabs.app/homeostasis/med/</loc></url>
   <url><loc>https://ranvierlabs.app/homeostasis/privacy</loc></url>
   <url><loc>https://ranvierlabs.app/homeostasis/terms</loc></url>
   <url><loc>https://ranvierlabs.app/homeostasis/support</loc></url>
