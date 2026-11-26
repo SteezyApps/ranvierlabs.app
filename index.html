@@ -77,9 +77,9 @@
     </article>
     <div class="link-gap" aria-hidden="true"><span class="node lit"></span></div>
     <div class="link-v" aria-hidden="true"><span class="wire"></span><span class="node lit"></span><span class="wire"></span></div>
-    <article class="panel app">
+    <article class="panel app quiet">
       <div class="panel-head"><img class="app-icon" src="/assets/img/turnpoint-icon-256.png" width="72" height="72" alt=""><h3>Turnpoint</h3></div>
-      <p>Pick a habit to stop or start and get a daily plan built around your hardest moments. For iPhone and Android.</p>
+      <p>Break a habit or build one.</p>
       <a class="btn-app" href="/turnpoint/">See Turnpoint</a>
     </article>
     <div class="link-gap" aria-hidden="true"><span class="node"></span></div>
@@ -104,6 +104,11 @@ b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='t
 p.addEventListener('click',function(e){if(e.target.tagName==='A')set(false);});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus();}});
 document.addEventListener('click',function(e){if(!p.contains(e.target)&&!b.contains(e.target))set(false);});})();
+(function(){var f=document.querySelector('.signup-form'),st=document.querySelector('.signup-status');if(!f||!window.fetch)return;
+f.addEventListener('submit',function(e){e.preventDefault();var btn=f.querySelector('button');btn.disabled=true;st.textContent='Sending…';
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){
+if(r.ok){f.reset();f.hidden=true;st.textContent='Thanks! We’ll email you when a new app launches.';}else{st.textContent='That didn’t go through. Please try again, or email support@ranvierlabs.app.';btn.disabled=false;}
+}).catch(function(){st.textContent='That didn’t go through. Please try again, or email support@ranvierlabs.app.';btn.disabled=false;});});})();
 </script>
 </body>
 </html>
