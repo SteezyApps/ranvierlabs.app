@@ -177,3 +177,27 @@ h1.jump .line{display:block}
   .foot-legal{gap:20px}
   .site-footer p{order:3;margin-top:8px}
 }
+
+/* Release-updates signup (replaces the "Next app" panel) */
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.panel.signup{justify-content:flex-start}
+.signup-form{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.signup-form input[type=email]{height:48px;border-radius:10px;border:1.5px solid var(--outline);background:var(--segment);color:var(--myelin);
+  padding:0 14px;font:inherit;font-size:16px}
+.signup-form input[type=email]::placeholder{color:var(--text-4)}
+.signup-form input[type=email]:focus-visible{outline:3px solid var(--signal);outline-offset:2px;border-color:var(--signal)}
+.signup-form button{height:48px;border:0;border-radius:10px;background:var(--signal);color:var(--axon);font:inherit;font-weight:700;cursor:pointer}
+.signup-form button:hover{background:var(--signal-hi)}
+.signup-form button:disabled{opacity:.6;cursor:default}
+.signup-status{margin:0;color:var(--myelin);font-size:15px}
+.signup-status:empty{display:none}
+.panel .signup-note{font-size:14px;color:var(--text-3)}
+.signup-note a{color:var(--signal)}
+
+/* Turnpoint card: quieter than Homeostasis (dark panel, outline button, smaller icon) */
+.panel.app.quiet{background:var(--segment);color:var(--myelin);border:1px solid var(--rule)}
+.panel.app.quiet p{color:var(--text-2)}
+.panel.app.quiet .app-icon{width:56px;height:56px;border-radius:14px}
+.panel.app.quiet h3{font-size:24px}
+.panel.app.quiet .btn-app{background:transparent;border:1.5px solid var(--outline);color:var(--myelin)}
+.panel.app.quiet .btn-app:hover{border-color:var(--text-3);background:transparent}
