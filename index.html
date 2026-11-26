@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ranvier Labs — Jump ahead.</title>
-<meta name="description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis and Turnpoint.">
+<meta name="description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis, a physiology simulator for iPhone.">
 <link rel="canonical" href="https://ranvierlabs.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ranvier Labs">
 <meta property="og:title" content="Ranvier Labs — Jump ahead.">
-<meta property="og:description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis and Turnpoint.">
+<meta property="og:description" content="We build apps that skip the slow parts. Ranvier Labs LLC publishes Homeostasis, a physiology simulator for iPhone.">
 <meta property="og:url" content="https://ranvierlabs.app/">
 <meta property="og:image" content="https://ranvierlabs.app/assets/img/og.png">
 <meta property="og:image:width" content="1200">
@@ -38,12 +38,12 @@
 <path class="m-arc a2" d="M40.5 66 Q60 22 79.5 66" fill="none" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
 <path class="m-arc a3" d="M79.5 66 Q99 22 118.5 66" fill="none" stroke-width="5" stroke-linecap="round"/>
 </svg><span class="wordmark">Ranvier <span>Labs</span></span></a>
-    <nav class="nav" aria-label="Main"><a href="#apps">Apps</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
+    <nav class="nav" aria-label="Main"><a href="/homeostasis/">Homeostasis</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
     <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-panel">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
     </button>
   </div>
-  <nav class="menu-panel" id="menu-panel" aria-label="Menu"><a href="#apps">Apps</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
+  <nav class="menu-panel" id="menu-panel" aria-label="Menu"><a href="/homeostasis/">Homeostasis</a><a href="mailto:support@ranvierlabs.app">Support</a></nav>
 </header>
 <main id="main">
 <section class="hero container">
@@ -68,27 +68,16 @@
 </section>
 
 <section class="apps" id="apps" aria-labelledby="apps-h">
-  <h2 id="apps-h">Our apps</h2>
-  <div class="app-row">
-    <article class="panel app">
-      <div class="panel-head"><img class="app-icon" src="/assets/img/homeostasis-icon-256.png" width="72" height="72" alt=""><h3>Homeostasis</h3></div>
+  <h2 id="apps-h">Our app</h2>
+  <article class="panel app feature">
+    <img class="app-icon" src="/assets/img/homeostasis-icon-256.png" width="96" height="96" alt="">
+    <div class="feature-text">
+      <h3>Homeostasis</h3>
       <p>Watch the body’s systems respond in real time, then test yourself. For physiology, nursing and pre-med exam prep.</p>
-      <a class="btn-app" href="/homeostasis/">See Homeostasis</a>
-    </article>
-    <div class="link-gap" aria-hidden="true"><span class="node lit"></span></div>
-    <div class="link-v" aria-hidden="true"><span class="wire"></span><span class="node lit"></span><span class="wire"></span></div>
-    <article class="panel app quiet">
-      <div class="panel-head"><img class="app-icon" src="/assets/img/turnpoint-icon-256.png" width="72" height="72" alt=""><h3>Turnpoint</h3></div>
-      <p>Break a habit or build one.</p>
-      <a class="btn-app" href="/turnpoint/">See Turnpoint</a>
-    </article>
-    <div class="link-gap" aria-hidden="true"><span class="node"></span></div>
-    <div class="link-v" aria-hidden="true"><span class="wire"></span><span class="node"></span><span class="wire"></span></div>
-    <article class="panel next">
-      <h3>Next app</h3>
-      <p>In the lab now. Want to hear when it launches? Email <a href="mailto:support@ranvierlabs.app">support@ranvierlabs.app</a>.</p>
-    </article>
-  </div>
+    </div>
+    <a class="btn-app" href="/homeostasis/">See Homeostasis</a>
+  </article>
+
 </section>
 </main>
 <footer class="site-footer">
@@ -108,7 +97,7 @@ document.addEventListener('click',function(e){if(!p.contains(e.target)&&!b.conta
 f.addEventListener('submit',function(e){e.preventDefault();var btn=f.querySelector('button');btn.disabled=true;st.textContent='Sending…';
 fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){
 if(r.ok){f.reset();f.hidden=true;st.textContent='Thanks! We’ll email you when a new app launches.';}else{st.textContent='That didn’t go through. Please try again, or email support@ranvierlabs.app.';btn.disabled=false;}
-}).catch(function(){st.textContent='That didn’t go through. Please try again, or email support@ranvierlabs.app.';btn.disabled=false;});});})();
+}).catch(function(){f.submit();});});})();
 </script>
 </body>
 </html>
