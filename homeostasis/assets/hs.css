@@ -136,3 +136,10 @@ section.block{padding-top:64px;padding-bottom:8px}
   .kit-slot .formkit-form .formkit-field,.kit-slot .formkit-form .formkit-submit,.kit-slot .formkit-form button[type=submit]{flex:0 0 auto!important;width:100%!important;min-width:0!important}
 }
 .kit-slot.cta-block .formkit-form.formkit-form[data-uid][data-format] div[data-group="dropdown"]::before,.kit-slot.cta-block .formkit-form.formkit-form[data-uid][data-format] div[data-group="dropdown"]::after{display:none!important;content:none!important}
+
+/* Waitlist confirmation page */
+.confirm{min-height:62vh;padding-top:56px;padding-bottom:64px}
+.confirm .check{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--teal);color:var(--navy);font-size:30px;font-weight:800;margin:0 0 20px}
+.confirm h1{font-size:clamp(40px,10vw,64px);font-weight:800}
+.confirm .sub{margin:16px 0 0;font-size:19px;color:var(--t2);max-width:40ch}
+.confirm .btn{margin-top:28px;width:auto}
