@@ -135,3 +135,4 @@ section.block{padding-top:64px;padding-bottom:8px}
   .kit-slot .formkit-form .formkit-fields{flex-direction:column!important;flex-wrap:nowrap!important}
   .kit-slot .formkit-form .formkit-field,.kit-slot .formkit-form .formkit-submit,.kit-slot .formkit-form button[type=submit]{flex:0 0 auto!important;width:100%!important;min-width:0!important}
 }
+.kit-slot .formkit-form [data-group="dropdown"]::before,.kit-slot .formkit-form [data-group="dropdown"]::after{display:none!important;content:none!important}
