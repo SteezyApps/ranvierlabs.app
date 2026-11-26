@@ -105,3 +105,33 @@ section.block{padding-top:64px;padding-bottom:8px}
   .cards{grid-template-columns:repeat(4,1fr)}
   .top .mini-cta{display:inline-flex;height:44px;font-size:16px;padding:0 18px;width:auto}
 }
+
+/* ---- Kit waitlist form: brand overrides, scoped to the Kit form only ---- */
+.kit-slot .formkit-form{background:transparent!important;border:0!important;box-shadow:none!important;max-width:none!important;width:100%!important;margin:0!important;padding:0!important;font-family:inherit!important;color:var(--ice)!important}
+.kit-slot .formkit-form [data-style="clean"],.kit-slot .formkit-form [data-style="full"]{padding:0!important;width:100%!important}
+.kit-slot .formkit-form .formkit-background{display:none!important}
+.kit-slot .formkit-form .formkit-header,.kit-slot .formkit-form .formkit-header *,.kit-slot .formkit-form .formkit-subheader,.kit-slot .formkit-form .formkit-subheader *,.kit-slot .formkit-form .formkit-guarantee,.kit-slot .formkit-form .formkit-guarantee *{color:var(--t2)!important;font-family:inherit!important}
+.kit-slot .formkit-form .formkit-fields{display:flex!important;flex-wrap:wrap!important;gap:10px!important;margin:0!important}
+.kit-slot .formkit-form .formkit-field{flex:1 1 200px!important;margin:0!important;min-width:0!important}
+.kit-slot .formkit-form .formkit-input,.kit-slot .formkit-form .formkit-select,.kit-slot .formkit-form input,.kit-slot .formkit-form select{
+  width:100%!important;height:52px!important;border-radius:12px!important;border:1.5px solid var(--outline)!important;background:var(--navy-2)!important;
+  color:var(--ice)!important;padding:0 16px!important;font-family:inherit!important;font-size:17px!important;font-weight:400!important;line-height:normal!important;box-shadow:none!important;-webkit-appearance:none;appearance:none}
+.kit-slot .formkit-form select,.kit-slot .formkit-form .formkit-select{padding-right:40px!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%232EE6D6' stroke-width='2'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat!important;background-position:right 16px center!important}
+.kit-slot .formkit-form select option{background:var(--navy-2);color:var(--ice)}
+.kit-slot .formkit-form input::placeholder{color:var(--t3)!important;opacity:1!important}
+.kit-slot .formkit-form input:focus,.kit-slot .formkit-form select:focus{outline:3px solid var(--teal)!important;outline-offset:2px!important;border-color:var(--teal)!important}
+.kit-slot .formkit-form .formkit-submit,.kit-slot .formkit-form button[type=submit]{
+  flex:0 0 auto!important;height:54px!important;min-width:200px!important;margin:0!important;border:0!important;border-radius:12px!important;
+  background:var(--teal)!important;background-color:var(--teal)!important;color:var(--navy)!important;font-family:inherit!important;font-weight:800!important;font-size:18px!important;cursor:pointer!important;box-shadow:none!important}
+.kit-slot .formkit-form .formkit-submit > span{padding:0 22px!important;color:var(--navy)!important;font-weight:800!important}
+.kit-slot .formkit-form .formkit-submit:hover,.kit-slot .formkit-form .formkit-submit:hover > span{background:var(--teal-hi)!important;background-color:var(--teal-hi)!important}
+.kit-slot .formkit-form .formkit-alert-success{background:var(--navy-2)!important;border:1px solid var(--teal)!important;color:var(--ice)!important;border-radius:12px!important}
+.kit-slot .formkit-form .formkit-alert-error{background:#3a1620!important;border:1px solid #ff8a9a!important;color:#ffd7dd!important;border-radius:12px!important}
+.kit-slot .formkit-powered-by-convertkit-container{display:none!important}
+.kit-slot .cta-note{margin-top:12px}
+@media (max-width:759px){
+  .kit-slot .formkit-form .formkit-fields{flex-direction:column!important;flex-wrap:nowrap!important}
+  .kit-slot .formkit-form .formkit-field,.kit-slot .formkit-form .formkit-submit,.kit-slot .formkit-form button[type=submit]{flex:0 0 auto!important;width:100%!important;min-width:0!important}
+}
